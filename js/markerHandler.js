@@ -56,13 +56,5 @@ AFRAME.registerComponent("markerhandler", {
     buttonDiv.style.display = "none";
   },
   //get the dishes collection from firestore database
-  getDishes: async function () {
-    return await firebase
-      .firestore()
-      .collection("dishes")
-      .get()
-      .then(snap => {
-        return snap.docs.map(doc => doc.data());
-      });
-  }
+ 
 });
